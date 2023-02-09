@@ -3,7 +3,7 @@
 @section('content')
 <div class="container d-flex justify-content-center align-items-center" style="min-height: 85vh">
     <div class="border border-secondary rounded-circle p-4 d-flex flex-column justify-content-center align-items-center" style="width:80vmin; height:80vmin; border-width: clamp(10px, 2vw, 20px)!important">
-        <h1 class="text-center text-white fw-semibold" style="z-index: 1">{{__('Log Out Success')}}</h1>
+        <h1 class="text-center text-white fw-semibold" style="z-index: 1">{{__('messages.logout_success')}}</h1>
     </div>
 </div>
 @endsection

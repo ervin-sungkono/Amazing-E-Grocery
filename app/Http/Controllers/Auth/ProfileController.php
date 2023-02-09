@@ -49,7 +49,7 @@ class ProfileController extends Controller
         ]);
 
         $status = $newUser ? 'success' : 'fail';
-        $message = $newUser ? __('Update profile success') : __('Update profile failed');
+        $message = $newUser ? __('messages.update_profile_success') : __('messages.update_profile_fail');
 
         return view('saved')->with($status, $message);
     }

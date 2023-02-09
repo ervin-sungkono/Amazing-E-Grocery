@@ -11,7 +11,7 @@ class ItemController extends Controller
     public function detail($lang, $id){
         $item = Item::find($id);
 
-        if(!$item) return redirect()->route('home', ['lang' => $lang])->with('fail', __("Item doesn't exist!"));
+        if(!$item) return redirect()->route('home', ['lang' => $lang])->with('fail', __('messages.item_not_exist'));
 
         return view('detail', compact('item'));
     }

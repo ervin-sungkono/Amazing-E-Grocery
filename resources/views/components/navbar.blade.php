@@ -13,7 +13,7 @@
             <ul class="navbar-nav me-auto">
                 <div class="dropdown">
                     <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      {{__("Languange")}}
+                      {{__('messages.language')}}
                     </a>
 
                     <ul class="dropdown-menu">
@@ -30,29 +30,29 @@
                     @if(Route::currentRouteName() === 'welcome')
                         @if (Route::has('login'))
                             <li class="nav-item">
-                                <a class="btn btn-secondary px-4 me-3" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="btn btn-secondary px-4 me-3" href="{{ route('login') }}">{{ __('messages.login') }}</a>
                             </li>
                         @endif
 
                         @if (Route::has('register'))
                             <li class="nav-item">
-                                <a class="btn btn-secondary px-4" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                <a class="btn btn-secondary px-4" href="{{ route('register') }}">{{ __('messages.register') }}</a>
                             </li>
                         @endif
                     @endif
                 @else
                     <li class="nav-item">
-                        <a class="nav-link {{Route::currentRouteName() === 'home' ? "active" : ""}}" href="{{ route('home') }}">{{ __('Home') }}</a>
+                        <a class="nav-link {{Route::currentRouteName() === 'home' ? "active" : ""}}" href="{{ route('home') }}">{{ __('messages.home') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{Route::currentRouteName() === 'cart' ? "active" : ""}}" href="{{ route('cart') }}">{{ __('Cart') }}</a>
+                        <a class="nav-link {{Route::currentRouteName() === 'cart' ? "active" : ""}}" href="{{ route('cart') }}">{{ __('messages.cart') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{Route::currentRouteName() === 'profile' ? "active" : ""}}" href="{{ route('profile') }}">{{ __('Profile') }}</a>
+                        <a class="nav-link {{Route::currentRouteName() === 'profile' ? "active" : ""}}" href="{{ route('profile') }}">{{ __('messages.profile') }}</a>
                     </li>
                     @if (Auth::user()->role->role_name === 'Admin')
                         <li class="nav-item">
-                            <a class="nav-link {{Route::currentRouteName() === 'account.maintenance' ? "active" : ""}}" href="{{ route('account.maintenance') }}">{{ __('Account Maintenance') }}</a>
+                            <a class="nav-link {{Route::currentRouteName() === 'account.maintenance' ? "active" : ""}}" href="{{ route('account.maintenance') }}">{{ __('messages.account_maintenance') }}</a>
                         </li>
                     @endif
                     <li class="nav-item dropdown">
@@ -64,7 +64,7 @@
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                onclick="event.preventDefault();
                                              document.getElementById('logout-form').submit();">
-                                {{ __('Logout') }}
+                                {{ __('messages.logout') }}
                             </a>
 
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">

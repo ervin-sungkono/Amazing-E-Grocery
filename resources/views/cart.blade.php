@@ -17,11 +17,11 @@
         <div class="row justify-content-end">
             <div class="col-md-6 d-flex justify-content-end align-items-center">
                 <h5 class="fw-semibold mb-0">
-                    {{__('Total'.': '.__('IDR').' '.number_format($orders->sum('price'), 0, ',', '.'))}}
+                    {{__('messages.total'.': '.__('messages.currency').' '.number_format($orders->sum('price'), 0, ',', '.'))}}
                 </h5>
                 <form action="{{route('cart.checkout')}}" method="POST">
                     @csrf
-                    <button type="submit" class="btn btn-lg btn-secondary ms-3">{{__('Checkout')}}</button>
+                    <button type="submit" class="btn btn-lg btn-secondary ms-3">{{__('messages.checkout')}}</button>
                 </form>
             </div>
         </div>

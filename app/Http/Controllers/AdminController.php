@@ -34,7 +34,7 @@ class AdminController extends Controller
         ]);
 
         $status = $newUser ? 'success' : 'fail';
-        $message = $newUser ? __("Role successfully updated") : __("Fail to update role");
+        $message = $newUser ? __('messages.role_update_success') : __('messages.role_update_fail');
 
         return redirect()->route('account.maintenance', ['lang' => session('locale')])->with($status, $message);
     }
@@ -44,7 +44,7 @@ class AdminController extends Controller
 
         Storage::disk('public')->delete($user->display_picture_link);
         $status = $user->delete() ? 'success' : 'fail';
-        $message = $status == 'success' ? __('Account deleted successfully') : __('Fail to delete account');
+        $message = $status == 'success' ? __('messages.delete_account_success') : __('messages.delete_account_fail');
 
         return redirect()->route('account.maintenance', ['lang' => session('locale')])->with($status, $message);
     }

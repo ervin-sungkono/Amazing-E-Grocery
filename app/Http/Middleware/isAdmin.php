@@ -28,7 +28,7 @@ class isAdmin
             }
 
         }else{
-            return redirect()->route('login')->with('fail', __('auth.guest'));
+            return redirect()->route('welcome')->with('fail', __('auth.guest'));
         }
     }
 }

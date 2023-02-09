@@ -5,7 +5,7 @@
         <div class="fs-4 fw-semibold">{{$item->item_name}}</div>
       </div>
       <div class="col-md-3">
-        <p class="fs-5 fw-bold mb-0">{{__('Price').': '.__('IDR').' '.number_format($item->price, 0, ',', '.')}}</p>
+        <p class="fs-5 fw-bold mb-0">{{__('messages.price').': '.__('messages.currency').' '.number_format($item->price, 0, ',', '.')}}</p>
       </div>
       <div class="col-md-2">
         <form action="{{route('cart.delete', ['id' => $order->order_id])}}" method="POST">
@@ -13,7 +13,7 @@
             @method('DELETE')
             <button type="submit" class="btn btn-danger text-white" >
                 <i class="bi bi-trash-fill"></i>
-                <span>{{__('Delete')}}</span>
+                <span>{{__('messages.delete')}}</span>
             </button>
         </form>
       </div>

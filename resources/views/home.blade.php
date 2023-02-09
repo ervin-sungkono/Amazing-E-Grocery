@@ -10,7 +10,7 @@
         </div>
         <div class="d-flex flex-column align-items-center">
             {{$items->onEachSide(1)->withQueryString()->links()}}
-            <p class="text-center mt-2">{{__('Page').' '.$items->currentPage()}}</p>
+            <p class="text-center mt-2">{{__('messages.page').' '.$items->currentPage()}}</p>
         </div>
     </div>
 </div>
