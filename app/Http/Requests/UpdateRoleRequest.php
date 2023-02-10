@@ -23,6 +23,7 @@ class UpdateRoleRequest extends FormRequest
      */
     public function rules()
     {
+        app()->setLocale(session('locale'));
         return [
             'role' => 'required | exists:roles,role_id',
         ];

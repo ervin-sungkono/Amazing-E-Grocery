@@ -24,6 +24,7 @@ class LoginRequest extends FormRequest
      */
     public function rules()
     {
+        app()->setLocale(session('locale'));
         return [
             'email' => 'required | email:dns',
             'password' => 'required | string'

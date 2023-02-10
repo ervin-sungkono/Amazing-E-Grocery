@@ -24,6 +24,7 @@ class UserRequest extends FormRequest
      */
     public function rules()
     {
+        app()->setLocale(session('locale'));
         return [
             'first_name' => 'required | alpha_num | max:25',
             'last_name' => 'required | alpha_num | max:25',
